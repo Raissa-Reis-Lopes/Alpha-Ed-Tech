@@ -1,0 +1,603 @@
+/*Paleta ff4000-000614-135b89-eee5e9-faaa8d*/
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+:root {
+  --cor-destaque: #ff4000;
+  --cor-secundaria: #135b89;
+  --cor-background: #000614;
+  --cor-texto: #eee5e9;
+}
+
+.light-mode{
+  --cor-destaque: #ff4000;
+  --cor-secundaria: #135b89;
+  --cor-background:  #eee5e9;
+  --cor-texto: #000614;
+}
+
+.light-mode .svg-icon{
+  background-color: #000614;
+  border-radius: 100% 100%;
+}
+
+.fixed-button {
+  position: fixed;
+  top: 5%; /* Ajuste a posição conforme necessário */
+  right: 1%; /* Ajuste a posição conforme necessário */
+  background-color: transparent;
+  color: white;
+  width: 2%;
+  height: 5%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* :root {
+  --cor-destaque: #ff4000;
+  --cor-secundaria: #135b89;
+  --cor-background: #eee5e9;
+  --cor-texto: #000614;
+} */
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color: var(--cor-texto);
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+  }
+
+  header{
+    display: block;
+  }
+
+  section.module.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Anotação para estudo: é esse background-attachment que dá o efeito do parallax!*/
+    background-size: cover;
+    -webkit-background-size: cover;  /* Anotação para estudo, podemos colocar assim para se adaptar a todos os navegadores*/
+    -moz-background-size: cover;
+    -o-brackground-size: cover;
+  }
+
+div.section-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-p{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+
+.inner-p a{
+  margin-top: 10px;
+  text-decoration: none;
+  color: var(--cor-destaque);
+  font-weight: 600;
+}
+
+section.module:last-child{
+  margin-bottom: 0;
+}
+
+section.module.parallax h2{
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: #eee5e9 ;
+  align-items: center;
+  text-align:center;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  text-shadow: 1px 1px #000614;
+}
+
+section.module.parallax2 h2{
+  position: absolute;
+  top: 10%;
+  left: 4.1%;
+}
+
+section.module.parallax3 h2{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  padding: 10px 10px;
+  width: max-content;
+}
+
+section.module.parallax h3{
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align:center;
+  font-size: 30px;
+  color:#eee5e9  ;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  text-shadow: 1px 1px  #000614;
+}
+
+section.module.content{
+  padding: 40px 0;
+  background-color:  var(--cor-background);
+}
+
+section.module.content3{
+  text-align: -webkit-center;
+}
+
+section.module.parallax1{
+  background-image: url("../src/fundo.jpg");
+}
+
+section.module.parallax2{
+  background-image: url("../src/fundo_hands2.png");
+
+}
+
+section.module.parallax3{
+  background-image: url("../src/fundo_deal.png");
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: var(--cor-background);
+  max-width: 900px;
+  align-self: center;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: var(--cor-destaque);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: var(--cor-destaque);
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background:var(--cor-background);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--cor-texto);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: var(--cor-destaque);
+}
+
+/* Add an italic font style to all quotes */
+q {
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+.title-slide {
+  color: var(--cor-destaque);
+  font-weight: 600;
+}
+
+
+
+
+
+
+  .title-p{
+    font-size: larger;
+    color: var(--cor-destaque);
+  }
+
+  .inner-content-1 a{
+    text-decoration: none;
+    color: var(--cor-destaque);
+  }
+
+  .inner-content-2, .inner-content-1{
+  width: auto;
+    background-color:var(--cor-background) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   padding: 0 2em;
+   text-align: justify;
+   height: auto;
+  }
+
+  .inner-content-2 h3, .inner-content-1 h3{
+    color:var(--cor-texto) ;
+    text-align: center;
+    border-bottom:solid 1px var(--cor-destaque);
+    border-top:solid 1px var(--cor-destaque);
+    border-radius: 10px 10px;
+    padding: 20px 20px;
+  }
+
+  .inner-p{
+    padding-top:20px;
+  }
+
+  .inner-content-2 p, .inner-content-1 p{
+    font-weight:600;
+    
+  }
+
+  .inner-content-2 p span{
+    color: var(--cor-secundaria);
+    text-align: center;
+    border-radius: 10px 10px;
+    font-weight: 1100;
+  }
+
+  .inner-content-2 h4{
+    color:var(--cor-texto) ;
+    text-align: center;
+    border-bottom:solid 1px var(--cor-destaque);
+    border-top:solid 1px var(--cor-destaque);
+    border-radius: 10px 10px;
+    padding: 10px 10px;
+
+  }
+
+  .inner-content-2 h4 a{
+    text-decoration: none;
+    color: var(--cor-texto);
+  }
+
+  .inner-content-2 h4 button{
+    box-shadow: black; 
+    border-radius: 10px 10px;
+    padding: 5px 5px;
+    background-color: transparent;
+    color: var(--cor-destaque);
+  }
+
+  .inner-content-2 h4 a:hover{
+    color: var(--cor-destaque);
+  }
+
+  .inner-content-2 h4 button:hover{
+    transform: scale(1.1);
+  }
+
+#moneyImg{
+  width: 8%;
+  height: 5%;
+}
+ 
+#moneyImg{
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+    animation: girarInfinitamente 5s linear infinite;
+}
+
+@keyframes girarInfinitamente {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.flip-card {
+  margin: 20px 20px;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border-top: 1px solid var(--cor-texto);
+  border-bottom: 1px solid var(--cor-texto);
+  border-radius: 10px 10px; 
+  perspective: 1000px;  /* Para dar noção de 3D */
+}
+
+.flip-card:nth-child(1){
+  margin-right: 30px;
+}
+
+.flip-card:nth-child(2){
+  margin-left: 30px;
+}
+
+.flip-card p{
+  text-align: center;
+  padding: 10px 10px;
+  line-height: 1.5;
+}
+
+
+/* Posicionar a frente e verso do cartão */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px; 
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: var(--cor-background);
+  color: var(--cor-destaque);
+}
+
+.flip-card-back {
+  background-color: var(--cor-background);
+  color: var(--cor-texto);
+  transform: rotateY(180deg);
+}
+
+
+.container2{
+  width: 80%;
+  max-width: 760px;
+  margin: 0 auto;
+  height: 50%;
+  text-align: center;
+
+}
+
+.container2 p {
+  font-weight:600;
+  border-top:solid 1px var(--cor-destaque);
+  border-bottom:solid 1px var(--cor-destaque);
+  border-radius: 10px 10px;
+  padding: 10px 10px;
+  
+}
+
+.selic-text, .disclaimer{
+  max-width: 723px;
+}
+
+
+#ebook{
+  border-radius: 10px 10px;
+  width: 15rem;
+  margin: 20px 20px;
+  align-self: center;
+  margin-bottom: 40px;
+}
+
+.section-wrapper3{
+  display: flex;
+  flex-direction: column;
+  margin: 0 40px;
+  padding: 20px 20px;
+  max-width: 723px;
+}
+
+.divForm{
+  align-self: center;
+  min-width: 300px;
+}
+
+form{
+  align-items: center;
+ 
+}
+
+fieldset{
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 30px 10px;
+  color: 000614;
+  border-top: solid 1px var(--cor-destaque);
+  border-bottom: solid 1px var(--cor-destaque);
+  border-color: var(--cor-destaque);
+  background-color: transparent;
+  border-radius: 30px 0;
+  display: flex;
+}
+
+fieldset ul{
+  align-items: center;
+  text-align: justify;
+}
+
+fieldset ul li::marker{
+  color: var(--cor-destaque);
+}
+fieldset ul li a:hover{
+  color: var(--cor-destaque);
+  cursor: pointer;
+}
+
+form a{
+  text-decoration: none;
+  color: var(--cor-secundaria);
+}
+
+form input{
+  margin-top: 10px;
+  border-radius: 10px 10px;
+  background-color: transparent;
+  width: -webkit-fill-available;
+  padding: 10px 20px;
+}
+
+
+form button{
+  border-bottom: solid 1px #000614;
+  border-top: solid 1px #000614;
+  border-left: solid 1px var(--cor-secundaria);
+  border-right: solid 1px var(--cor-secundaria);
+  box-shadow: black;
+  border-radius: 10px 10px;
+  padding: 5px 5px;
+  width: 90%;
+}
+form button a{
+  font-weight: 600;
+}
+
+.align-button{
+  text-align: center;
+}
+
+form button:hover a{
+  color: var(--cor-destaque);
+}
+
+form button:hover{
+ color: var(--cor-destaque);
+ transform: scale(1.1);
+}
+
+
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 9, 29);
+  text-align: center;
+  border-top: 1px solid var(--cor-destaque);
+}
+
+footer h5{
+  color: white;
+}
+
+
+
+@media (min-width: 780px) {
+  .section-wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .section-wrapper3{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .section-wrapper3 .inner-p{
+    display: none;
+  }
+
+  #ebook{
+    height: 20rem;
+    width: 20rem;
+  }
+  
+  .card-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    max-width: 930px;
+  }
+ 
+  section.module.parallax2 h2 {
+    position: absolute;
+    top: 10%;
+    padding: 10px 10px;
+    left: 4.1%;
+    right: 50%;
+  }
+
+  section.module.parallax3 h2 {
+    position: absolute;
+    top: 10%;
+    padding: 10px 10px;
+    left: 5%;
+    right: 70%;
+    width: max-content;
+  }
+}
+
+@media (max-width: 780px){
+
+  section.module.parallax2, section.module.parallax3{
+    background-position: right;
+  }
+
+}
