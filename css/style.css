@@ -19,19 +19,21 @@ html{
   --cor-texto: #000614;
 }
 
-.light-mode .svg-icon{
-  background-color: #000614;
-  border-radius: 100% 100%;
+.light-mode #moneyImg, .light-mode .svg-icon, .light-mode form input {
+  filter: invert(1);
+}
+
+.content1{
+  position: relative;
 }
 
 .fixed-button {
-  position: fixed;
-  top: 5%; /* Ajuste a posição conforme necessário */
-  right: 1%; /* Ajuste a posição conforme necessário */
+  position: absolute;
+  top: 2%;
+  right: 2%;
   background-color: transparent;
   color: white;
-  width: 2%;
-  height: 5%;
+  width: 2rem;
   cursor: pointer;
   z-index: 999;
 }
@@ -456,11 +458,11 @@ q {
 .divForm{
   align-self: center;
   min-width: 300px;
+  padding-right: 2rem;
 }
 
 form{
   align-items: center;
- 
 }
 
 fieldset{
@@ -501,6 +503,7 @@ form input{
   background-color: transparent;
   width: -webkit-fill-available;
   padding: 10px 20px;
+  color: white;
 }
 
 
@@ -557,6 +560,7 @@ footer h5{
   .section-wrapper3{
     display: flex;
     flex-direction: row;
+    padding-right:50px;
   }
 
   .section-wrapper3 .inner-p{
