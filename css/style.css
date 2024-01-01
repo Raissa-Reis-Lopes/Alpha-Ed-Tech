@@ -1,6 +1,5 @@
 /*Paleta ff4000-000614-135b89-eee5e9-faaa8d*/
 
-
 html{
   scroll-behavior: smooth;
 }
@@ -508,6 +507,7 @@ form input{
 
 
 form button{
+  cursor: pointer;
   border-bottom: solid 1px #000614;
   border-top: solid 1px #000614;
   border-left: solid 1px var(--cor-secundaria);
