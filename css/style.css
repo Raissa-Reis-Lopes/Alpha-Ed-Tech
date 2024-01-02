@@ -37,14 +37,6 @@ html{
   z-index: 999;
 }
 
-/* :root {
-  --cor-destaque: #ff4000;
-  --cor-secundaria: #135b89;
-  --cor-background: #eee5e9;
-  --cor-texto: #000614;
-} */
-
-
 body{
     margin: 0;
     padding: 0;
