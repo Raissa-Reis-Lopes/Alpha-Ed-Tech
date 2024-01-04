@@ -9,6 +9,7 @@ html{
   --cor-secundaria: #135b89;
   --cor-background: #000614;
   --cor-texto: #eee5e9;
+  --cor-texto-modal: white;
 }
 
 .light-mode{
@@ -16,6 +17,7 @@ html{
   --cor-secundaria: #135b89;
   --cor-background:  #eee5e9;
   --cor-texto: #000614;
+  --cor-texto-modal: white;
 }
 
 .light-mode #moneyImg, .light-mode .svg-icon, .light-mode form input {
@@ -591,6 +593,12 @@ form button:hover{
   padding: 2px 16px;
   margin-bottom: 10px;
 }
+
+.modal-body p{
+  color: var(--cor-texto-modal);
+}
+
+
 
 .modal-body a{
   text-decoration: none;
