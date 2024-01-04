@@ -341,6 +341,7 @@ q {
 }
 
 .flip-card {
+  cursor: pointer;
   margin: 20px 20px;
   background-color: transparent;
   width: 300px;
