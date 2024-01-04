@@ -227,14 +227,72 @@
                                     <h6>
                                         <ul>
                                             <li>Ao preencher o formulário, concordo em receber comunicações de acordo com meus interesses.</li>
-                                            <li>Ao informar meus dados, eu concordo com a <a>Política de privacidade</a></li>
+                                            <li>Ao informar meus dados, eu concordo com a <a id="myBtn">Política de privacidade</a></li>
                                             <li>Você pode alterar suas permissões de comunicação a qualquer tempo.</li>
                                         </ul>
                                     </h6>  
                                 </form>
                             </fieldset>
                         </div>
-                        </div>
+                     
+                    </div>
+                   
+    <!-- Modal para a Política de privacidade -->
+    <div id="myModal" class="modal">
+                    
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Política de Privacidade</h2>
+          </div>
+          <div class="modal-body">
+            <p>         
+                Ano de Vigência: 2024
+                <br><br>
+                
+                Esta Política de Privacidade descreve como a InvesT.I. coleta, usa e protege as informações pessoais dos usuários deste site.
+                <br> <br>
+                1. Informações Coletadas
+                <br> <br>
+                1.1 Informações Pessoais: Podemos coletar informações pessoais, como nome, endereço de e-mail, e informações de contato.
+                <br> <br>
+                1.2 Informações de Uso: Registramos automaticamente informações sobre como você interage com nosso site, incluindo seu endereço IP, tipo de navegador, páginas visitadas e tempo gasto nelas.
+                <br> <br>
+                2. Uso das Informações
+                <br> <br>
+                2.1 Fornecimento de Serviço: Utilizamos suas informações pessoais para fornecer os serviços solicitados e manter a funcionalidade do site.
+                <br> <br>
+                2.2 Comunicações: Podemos enviar e-mails sobre atualizações, novos recursos ou informações relevantes. Você pode optar por não receber essas comunicações.
+                <br> <br>
+                3. Compartilhamento de Informações
+                <br> <br>
+                3.1 Parceiros de Negócios: Podemos compartilhar informações com parceiros de negócios para melhorar nossos serviços ou para fins de marketing.
+                <br> <br>
+                3.2 Requisitos Legais: Reservamo-nos o direito de divulgar suas informações conforme exigido por lei.
+                <br> <br>
+                4. Cookies e Tecnologias Semelhantes
+                <br> <br>
+                Utilizamos cookies e tecnologias semelhantes para personalizar sua experiência, analisar o uso do site e melhorar a eficácia das campanhas de marketing.
+                <br> <br>
+                5. Segurança das Informações
+                <br> <br>
+                Empregamos medidas de segurança para proteger suas informações pessoais contra acesso não autorizado ou divulgação.
+                <br> <br>
+                6. Seus Direitos
+                <br> <br>
+                Você tem o direito de acessar, corrigir ou excluir suas informações pessoais. Entre em contato conosco para exercer esses direitos.
+                <br> <br>
+                7. Alterações nesta Política
+                <br> <br>
+                Esta Política de Privacidade pode ser atualizada periodicamente. Recomendamos revisar regularmente para estar ciente de quaisquer alterações.
+                <br> <br>
+                8. Contato
+                <br> <br>
+                Para dúvidas ou preocupações sobre esta Política de Privacidade, entre em contato conosco através do e-mail <a href="mailto:contato@investi.com.br">contato@investi.com.br</a>  </p>
+          </div>
+        </div>
+      </div>
                     </section>         
     <footer>
         <h5> Copyright © Raissa Reis Lopes - Alpha Ed Tech 2023 </h5>
@@ -288,6 +346,30 @@ for (i = 0; i < dots.length; i++) {
 slides[slideIndex-1].style.display = "block";
 dots[slideIndex-1].className += " active";
 }
+
+
+// Script para o Modal da Política de Privacidade
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 </script> 
 
 </body>
