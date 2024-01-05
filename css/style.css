@@ -5,7 +5,6 @@ html{
   scroll-behavior: smooth;
 }
 
-
 /* Style to the scroll bar from the body */
 ::-webkit-scrollbar {
   width: 10px;
@@ -153,11 +152,12 @@ section.module.parallax3{
   background-image: url("../src/fundo_deal.png");
 }
 
-/* Light-mode "button" position*/
+/* Light-mode "button" relative position*/
 .content1{
   position: relative;
 }
 
+/* Light-mode "button" position*/
 .fixed-button {
   position: absolute;
   top: 2%;
@@ -169,21 +169,83 @@ section.module.parallax3{
   z-index: 999;
 }
 
-/* Specifc styles from each part*/
 div.section-wrapper{
     display: flex;
     flex-direction: column;
 }
 
+/* Inner content from each section */
+.inner-content-1 a{
+  text-decoration: none;
+  color: var(--cor-destaque);
+}
 
-
-
-
-
-
-.card-container{
+.inner-content-2, .inner-content-1{
+width: auto;
+  background-color:var(--cor-background) ;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ padding: 0 2em;
+ text-align: justify;
+ height: auto;
+}
+
+.inner-content-2 h3, .inner-content-1 h3{
+  color:var(--cor-texto) ;
+  text-align: center;
+  border-bottom:solid 1px var(--cor-destaque);
+  border-top:solid 1px var(--cor-destaque);
+  border-radius: 10px 10px;
+  padding: 20px 20px;
+}
+
+.inner-p{
+  padding-top:20px;
+}
+
+.inner-content-2 p, .inner-content-1 p{
+  font-weight:600;
+  
+}
+
+.inner-content-2 p span{
+  color: var(--cor-secundaria);
+  text-align: center;
+  border-radius: 10px 10px;
+  font-weight: 1100;
+}
+
+.inner-content-2 h4{
+  color:var(--cor-texto) ;
+  text-align: center;
+  border-bottom:solid 1px var(--cor-destaque);
+  border-top:solid 1px var(--cor-destaque);
+  border-radius: 10px 10px;
+  padding: 10px 10px;
+
+}
+
+.inner-content-2 h4 a{
+  text-decoration: none;
+  color: var(--cor-texto);
+}
+
+.inner-content-2 h4 button{
+  box-shadow: black; 
+  border-radius: 10px 10px;
+  padding: 5px 5px;
+  background-color: transparent;
+  color: var(--cor-destaque);
+}
+
+.inner-content-2 h4 a:hover{
+  color: var(--cor-destaque);
+}
+
+.inner-content-2 h4 button:hover{
+  transform: scale(1.1);
 }
 
 .inner-p{
@@ -282,79 +344,6 @@ q {
   .title-p{
     font-size: larger;
     color: var(--cor-destaque);
-  }
-
-  .inner-content-1 a{
-    text-decoration: none;
-    color: var(--cor-destaque);
-  }
-
-  .inner-content-2, .inner-content-1{
-  width: auto;
-    background-color:var(--cor-background) ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-   padding: 0 2em;
-   text-align: justify;
-   height: auto;
-  }
-
-  .inner-content-2 h3, .inner-content-1 h3{
-    color:var(--cor-texto) ;
-    text-align: center;
-    border-bottom:solid 1px var(--cor-destaque);
-    border-top:solid 1px var(--cor-destaque);
-    border-radius: 10px 10px;
-    padding: 20px 20px;
-  }
-
-  .inner-p{
-    padding-top:20px;
-  }
-
-  .inner-content-2 p, .inner-content-1 p{
-    font-weight:600;
-    
-  }
-
-  .inner-content-2 p span{
-    color: var(--cor-secundaria);
-    text-align: center;
-    border-radius: 10px 10px;
-    font-weight: 1100;
-  }
-
-  .inner-content-2 h4{
-    color:var(--cor-texto) ;
-    text-align: center;
-    border-bottom:solid 1px var(--cor-destaque);
-    border-top:solid 1px var(--cor-destaque);
-    border-radius: 10px 10px;
-    padding: 10px 10px;
-
-  }
-
-  .inner-content-2 h4 a{
-    text-decoration: none;
-    color: var(--cor-texto);
-  }
-
-  .inner-content-2 h4 button{
-    box-shadow: black; 
-    border-radius: 10px 10px;
-    padding: 5px 5px;
-    background-color: transparent;
-    color: var(--cor-destaque);
-  }
-
-  .inner-content-2 h4 a:hover{
-    color: var(--cor-destaque);
-  }
-
-  .inner-content-2 h4 button:hover{
-    transform: scale(1.1);
   }
 
 #moneyImg{
@@ -468,7 +457,6 @@ q {
 .inner-content-1 .disclaimer{
   font-weight: 200;
 }
-
 
 #ebook{
   border-radius: 10px 10px;
