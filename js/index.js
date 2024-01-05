@@ -1,5 +1,5 @@
     
-//Script para o light mode
+//Light mode script
 
 document.getElementById('toggle-light-mode').addEventListener('click', function() {
     var body = document.body;
@@ -8,7 +8,7 @@ document.getElementById('toggle-light-mode').addEventListener('click', function(
     svgIcon.classList.toggle('light-mode');
 });
 
-//Script para a autoescrita
+//Script to auto typing
     var typed = new Typed(".typing", {
         strings: [
             'Renda Fixa', 'Renda Variável', 'CDB e LC', 'Tesouro Direto', 'LCI e LCA', 'Debêntures', 'CRI e CRA',  'Ações', 'Fundos Imobiliários', 'ETF', 'BDRs', 'Fundo de Investimento','COE', 'Previdência Privada'],
@@ -18,7 +18,7 @@ document.getElementById('toggle-light-mode').addEventListener('click', function(
         cursorChar: '|',
     });
 
-//Scipt para o slide
+//Scipt to slide
     var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -47,7 +47,7 @@ dots[slideIndex-1].className += " active";
 }
 
 
-// Script para o Modal da Política de Privacidade
+// Privacy Policy Modal Script
 
 var modal = document.getElementById("myModal");
 
