@@ -152,6 +152,11 @@ section.module.parallax3{
   background-image: url("../src/fundo_deal.png");
 }
 
+/* Section parallax image position */
+section.module.parallax2, section.module.parallax3{
+  background-position: right;
+}
+
 /* Light-mode "button" relative position*/
 .content1{
   position: relative;
@@ -167,6 +172,28 @@ section.module.parallax3{
   width: 2rem;
   cursor: pointer;
   z-index: 999;
+}
+
+/* Money img animation */
+#moneyImg{
+  width: 8%;
+  height: 5%;
+}
+ 
+#moneyImg{
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+    animation: girarInfinitamente 5s linear infinite;
+}
+
+@keyframes girarInfinitamente {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 div.section-wrapper{
@@ -263,6 +290,69 @@ width: auto;
 }
 
 
+/* Flip cards "Renda Fixa e Variável" */
+.flip-card {
+  cursor: pointer;
+  margin: 20px 20px;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border-top: 1px solid var(--cor-texto);
+  border-bottom: 1px solid var(--cor-texto);
+  border-radius: 10px 10px; 
+  perspective: 1000px;  /* Para dar noção de 3D */
+}
+
+.flip-card:nth-child(1){
+  margin-right: 30px;
+}
+
+.flip-card:nth-child(2){
+  margin-left: 30px;
+}
+
+.flip-card p{
+  text-align: center;
+  padding: 10px 10px;
+  line-height: 1.5;
+}
+
+/* Front and back flip card position*/
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px; 
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: var(--cor-background);
+  color: var(--cor-destaque);
+}
+
+.flip-card-back {
+  background-color: var(--cor-background);
+  color: var(--cor-texto);
+  transform: rotateY(180deg);
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -346,110 +436,6 @@ q {
     color: var(--cor-destaque);
   }
 
-#moneyImg{
-  width: 8%;
-  height: 5%;
-}
- 
-#moneyImg{
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transition: transform 1s ease-in-out;
-    animation: girarInfinitamente 5s linear infinite;
-}
-
-@keyframes girarInfinitamente {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
-.flip-card {
-  cursor: pointer;
-  margin: 20px 20px;
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border-top: 1px solid var(--cor-texto);
-  border-bottom: 1px solid var(--cor-texto);
-  border-radius: 10px 10px; 
-  perspective: 1000px;  /* Para dar noção de 3D */
-}
-
-.flip-card:nth-child(1){
-  margin-right: 30px;
-}
-
-.flip-card:nth-child(2){
-  margin-left: 30px;
-}
-
-.flip-card p{
-  text-align: center;
-  padding: 10px 10px;
-  line-height: 1.5;
-}
-
-
-/* Posicionar a frente e verso do cartão */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px 10px; 
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: var(--cor-background);
-  color: var(--cor-destaque);
-}
-
-.flip-card-back {
-  background-color: var(--cor-background);
-  color: var(--cor-texto);
-  transform: rotateY(180deg);
-}
-
-
-.container2{
-  width: 80%;
-  max-width: 760px;
-  margin: 0 auto;
-  height: 50%;
-  text-align: center;
-
-}
-
-.container2 p {
-  font-weight:600;
-  border-top:solid 1px var(--cor-destaque);
-  border-bottom:solid 1px var(--cor-destaque);
-  border-radius: 10px 10px;
-  padding: 10px 10px;
-  
-}
-
 .selic-text, .disclaimer{
   max-width: 723px;
 }
@@ -505,6 +491,7 @@ fieldset ul{
 fieldset ul li::marker{
   color: var(--cor-destaque);
 }
+
 fieldset ul li a:hover{
   color: var(--cor-destaque);
   cursor: pointer;
@@ -525,7 +512,6 @@ form input{
   padding: 10px 20px;
   color: white;
 }
-
 
 form button{
   cursor: pointer;
@@ -555,8 +541,7 @@ form button:hover{
  transform: scale(1.1);
 }
 
-
-/* Css para o Modal da Política de Privacidade */
+/* Privacy Policy Modal */
 /* The Modal (background) */
 .modal {
   position: absolute;
@@ -568,30 +553,6 @@ form button:hover{
   width: 100%; /* Full width */
   height: -webkit-fill-available;
   overflow: auto; /* Enable scroll if needed */
-}
-
-
-/* Using the scrollbar style to "hide" the scrollbar */
-.modal::-webkit-scrollbar {
-  width: 10px;
-}
-
-.modal::-webkit-scrollbar-thumb {
-  background-color: var(--cor-background);
-  border-radius: 5px;
-}
-
-.modal::-webkit-scrollbar-track {
-  background-color: var(--cor-background);
-}
-
-.modal::-webkit-scrollbar-thumb:hover {
-  background-color: var(--cor-background);
-}
-
-/* Adicionando uma transição suave à barra de rolagem */
-.modal::-webkit-scrollbar-thumb {
-  transition: background-color 0.3s ease-in-out;
 }
 
 /* Modal Content */
@@ -610,7 +571,7 @@ form button:hover{
   animation-duration: 0.4s
 }
 
-/* Add Animation */
+/* Add Modal Animation */
 @-webkit-keyframes animatetop {
   from {top:-300px; opacity:0} 
   to {top:0; opacity:1}
@@ -621,14 +582,13 @@ form button:hover{
   to {top:0; opacity:1}
 }
 
-/* The Close Button */
+/* The Modal Close Button */
 .close {
   color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: var(--cor-destaque);
@@ -655,11 +615,31 @@ form button:hover{
   font-weight: 600;
 }
 
-
-
 .modal-body a{
   text-decoration: none;
   color: var(--cor-destaque);
+}
+
+/* Using the scrollbar style to "hide" the scrollbar */
+.modal::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background-color: var(--cor-background);
+  border-radius: 5px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background-color: var(--cor-background);
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background-color: var(--cor-background);
+}
+
+.modal::-webkit-scrollbar-thumb {
+  transition: background-color 0.3s ease-in-out;
 }
 
 footer{
@@ -675,9 +655,19 @@ footer h5{
   color: white;
 }
 
-
-
 @media (min-width: 780px) {
+  section.module.parallax2 h2 {
+    position: absolute;
+    top: 10%;
+    padding: 10px 10px;
+    left: 4.1%;
+    right: 50%;
+}
+
+  section.module.parallax2, section.module.parallax3{
+    background-position: unset;
+  }
+
   .section-wrapper{
     display: flex;
     flex-direction: row;
@@ -706,7 +696,6 @@ footer h5{
     justify-content: space-evenly;
     max-width: 930px;
   }
- 
 
   .modal{
     height: -webkit-fill-available;
@@ -716,17 +705,8 @@ footer h5{
   }
 }
 
-
 @media(min-width: 480px){
   .modal-content{
     text-align:justify;
   }
-}
-
-@media (max-width: 780px){
-
-  section.module.parallax2, section.module.parallax3{
-    background-position: right;
-  }
-
 }
