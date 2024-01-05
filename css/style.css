@@ -153,6 +153,7 @@ section.module.parallax3{
   background-image: url("../src/fundo_deal.png");
 }
 
+/* Light-mode "button" position*/
 .content1{
   position: relative;
 }
@@ -168,6 +169,7 @@ section.module.parallax3{
   z-index: 999;
 }
 
+/* Specifc styles from each part*/
 div.section-wrapper{
     display: flex;
     flex-direction: column;
